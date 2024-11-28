@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #333;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.galeria a {
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.galeria a:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

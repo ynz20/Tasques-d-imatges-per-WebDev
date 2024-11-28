@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Part 3</h1>
+    <img src="./images/japan.jpg" alt="Canal d'aigua entre cirerers"
+    srcset="
+        ./images/AvifPhoto.avif 480w,
+        ./images/AvifPhoto2.avif 800w
+    "
+    sizes="
+        (max-width: 600px) 100vw,
+        (max-width: 1200px) 50vw,
+        33vw
+    "
+    />
+    <h1>Part 4</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="./images/AvifPhoto.avif">
+        <source media="(max-width: 800px)" srcset="./images/AvifPhoto2.avif">
+        <img src="./images/japan.jpg" alt="Imatge de reserva">
+    </picture>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-xl">
+        <h1 class="text-3xl font-semibold text-center text-blue-600 mb-4">Selecciona una Zona</h1>
+        <p class="text-lg text-center text-gray-700 mb-6">Fes clic a una de les zones de la imatge per accedir a les pàgines.</p>
+
+        <img src="./images/mapa.jpg" id="miImagen" alt="Workplace" class="rounded-md shadow-md" usemap="#workmap">
+
+        <map name="workmap">
+            <area shape="rect" coords="0,0,391,454" alt="Zona Blau" href="https://www.twitch.tv/">
+            <area shape="rect" coords="392,0,607,453" alt="Zona Vermell" href="https://www.youtube.com/">
+        </map>
+    </div>
+
+    <!-- Script para obtener las coordenadas -->
+    <script>
+        const imagen = document.getElementById('miImagen');
+        imagen.addEventListener('click', function(evento) {
+            const x = evento.offsetX;
+            const y = evento.offsetY;
+            console.log(`Coordenadas: ${x}, ${y}`);
+        });
+    </script>
+</body>
+</html>
